@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import logo from '../assets/logo.png'
 import { useNavigate } from "react-router-dom";
-import BackgroundImage from "../pages/Backgroundimg";
-import Header from "./Header";
+import BackgroundImage from "../components/Backgroundimg";
+import Header from "../components/Header";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 

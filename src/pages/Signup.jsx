@@ -5,8 +5,8 @@ import {
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import BackgroundImage from "./Backgroundimg"
-import Header from "./Header";
+import BackgroundImage from "../components/Backgroundimg"
+import Header from "../components/Header";
 import { firebaseAuth } from "../utils/firebase-config";
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);

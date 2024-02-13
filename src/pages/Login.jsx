@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from '../assets/logo.png'
 import { useNavigate } from "react-router-dom";
 import BackgroundImage from "../components/Backgroundimg";
 import Header from "../components/Header";

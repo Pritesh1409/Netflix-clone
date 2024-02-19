@@ -18,10 +18,10 @@ export default function Netflix() {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getGenres())
-  })
+  },[])
   useEffect(()=>{
     if(genresLoaded) dispatch(fetchMovies({type: "all"}))
-  })
+  },[genresLoaded])
   window.onscroll = ()=>{
     setIsScrolled(window.pageYOffset === 0 ? false : true)
     return ()=> (window.onscroll = null)

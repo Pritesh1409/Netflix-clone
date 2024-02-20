@@ -10,7 +10,7 @@ import Notavailable from './Notavailable'
 import Navbar from '../components/Navbar'
 import SelectGenre from './SelectGenre'
 
-export default function Movies() {
+export default function TVShows() {
   const [isScrolled , setIsScrolled]= useState(false)
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -22,7 +22,7 @@ export default function Movies() {
     dispatch(getGenres())
   },[])
   useEffect(()=>{
-    if(genresLoaded) dispatch(fetchMovies({genres,type: "movie"}))
+    if(genresLoaded) dispatch(fetchMovies({genres,type: "tv"}))
   },[genresLoaded])
 
    onAuthStateChanged(firebaseAuth, (currentUser) => {
@@ -38,7 +38,7 @@ export default function Movies() {
           <Navbar isScrolled={isScrolled} />
         </div>
         <div className="data">
-          <SelectGenre genres={genres} type="movie" />
+          <SelectGenre genres={genres} type="tv" />
           {movies && movies.length ? <Slider movies={movies} /> : <Notavailable />}
         </div>
       </Container>
